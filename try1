@@ -1,0 +1,50 @@
+var Pages = Titanium.UI.createTabGroup();
+ 
+var Window1 = Titanium.UI.createWindow({
+title: 'Page 1',
+backgroundColor: '#BA0069',
+fullscreen: 'true',
+orientationModes: [Titanium.UI.PORTRAIT]
+});
+ 
+var headline = Titanium.UI.createView({
+height: 90,
+top: 30,
+backgroundColor: '#00E2C3'
+});
+ 
+var headlineWords = Titanium.UI.createLabel({
+text: 'Pretty Colors!',
+color: '#000000',
+font: {fontSize: 15, fontFamily: 'Georgia', fontWeight: 'bold'},
+textAlign: 'center'
+});
+ 
+var Page1 = Titanium.UI.createTab({
+icon: 'page1icon.png',
+title: 'Page 1',
+window: Window1
+});
+ 
+var Window2 = Titanium.UI.createWindow({
+backgroundImage: '/353/flowers.jpeg',
+title: 'Page2',
+fullscreen: 'true',
+orientationModes: [Titanium.UI.PORTRAIT]
+});
+ 
+ 
+var Page2 = Titanium.UI.createTab({
+icon: 'page2icon.png',
+title: 'Page 2',
+window: Window2
+});
+ 
+headline.add(headlineWords);
+Window1.add(headline);
+ 
+Pages.addTab(Page1);
+Pages.addTab(Page2);
+
+
+Pages.open();​
